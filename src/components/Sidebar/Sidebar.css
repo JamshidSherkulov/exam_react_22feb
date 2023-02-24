@@ -1,0 +1,22 @@
+#sidebar__container {
+    width: 100%;
+    height: 100vh;
+    background-color: #0079db;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+#sidebar__container > div {
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    padding: 20px 10px; 
+    cursor: pointer;
+}
+
+#sidebar__container > div:hover {
+    background-color: #333;
+}
+
+
