@@ -4,7 +4,7 @@
     align-items: center;
 }
 
-#all__users > span {
+#all__users > div {
     display: block;
     width: 30%;
 }
