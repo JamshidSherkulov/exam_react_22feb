@@ -1,0 +1,10 @@
+#all__users {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+#all__users > span {
+    display: block;
+    width: 30%;
+}
