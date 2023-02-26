@@ -15,7 +15,7 @@ const Sidebar = () => {
             </div>
             <div>
                 <AiOutlineSetting className="fs-4 text-light" />
-                <Link to={ '/users' } className="fs-6 text-light text-decoration-none ps-2">Amallar</Link>
+                <Link to={ '/settings' } className="fs-6 text-light text-decoration-none ps-2">Amallar</Link>
             </div>
             <div>
                 <BiUserX className="fs-4 text-light" />

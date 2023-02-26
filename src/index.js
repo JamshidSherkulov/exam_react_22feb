@@ -6,6 +6,7 @@ import 'bootstrap/dist/css/bootstrap.min.css';
 import 'bootstrap/dist/js/bootstrap.min.js';
 import { BrowserRouter, Routes, Route } from 'react-router-dom';
 import Statistics from './pages/Statistics/Statistics';
+import Settings from './pages/Settings/Settings';
 
 const root = ReactDOM.createRoot(document.getElementById('root'));
 root.render(
@@ -14,6 +15,7 @@ root.render(
       <Routes>
         <Route path={ '/' } element={ <App /> }>
           <Route index element={ <Statistics className='w-100' /> } />
+          <Route path='/settings' element={ <Settings /> } />
         </Route>
       </Routes>
     </BrowserRouter>
