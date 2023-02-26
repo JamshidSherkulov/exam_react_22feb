@@ -1,0 +1,10 @@
+.item__container {
+    width: 50%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    justify-self: center;
+    padding-top: 10px;
+    border-radius: 20px;
+}
