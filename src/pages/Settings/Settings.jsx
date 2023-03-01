@@ -2,10 +2,37 @@ import React, {useState} from "react";
 import Search from "../../components/Search/Search";
 import userData from "../../data/userData";
 import {BsThreeDotsVertical} from 'react-icons/bs'
+import LongMenu from "../../components/MenuList/MenuList";
 
 const Settings = () => {
     const[userList, setUserList] = useState(userData)
 
+    function blockUser(index) {
+        let currentData = [...userList]
+        currentData[index].status = false
+        setUserList(currentData)
+    }
+
+    function unBlockUser(index) {
+        let currentData = [...userList]
+        currentData[index].status = true
+        setUserList(currentData)
+    }
+
+    function deleteUser(index) {
+        let currentData = [...userList]
+        currentData.splice(index, 1)
+        setUserList(currentData)
+    }
+
+    function editUser(index, inputValue) {
+        let currentData = [...userList]
+        currentData[index].user = inputValue
+        currentData[index].number = inputValue
+        currentData[index].stir = inputValue
+        currentData[index].device = inputValue
+        setUserList(currentData)
+    }
 
     return(
         <>
@@ -36,13 +63,13 @@ const Settings = () => {
                         {
                             userList.map((user, index) => {
                                 return(
-                                    <tr key={index} className="d">
+                                    <tr style={user.status ? {background: 'white'} : {background: '#ffeeee'}} key={index} className="d">
                                         <td className="p-3">{user.id}</td>
                                         <td className="p-3">{user.user}</td>
                                         <td className="p-3">{user.number}</td>
                                         <td className="p-3">{user.stir}</td>
                                         <td className="p-3">{user.device}</td>
-                                        <td><BsThreeDotsVertical className="mt-2" /></td>
+                                        <td><LongMenu blockUser={blockUser} unBlockUser={unBlockUser} deleteUser={deleteUser} editUser={editUser} index={index} /> </td>
                                     </tr>
                                 )
                             })
